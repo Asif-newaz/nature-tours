@@ -13,12 +13,12 @@ Dark Green: #28b485 */
 }
 
 /* html tag uses Browser default font size and Browser default font size is 16px */
-/* So we have converted browser default font size here to 10px */
+/* So here we have converted browser default font size here to 10px */
 /* Remember one thing 16px = 100% for this case */
 /* So here i converted 16px to 10px by this calculation (10/16 = .625*100 = 62.5)  */
 html {
     font-size: 62.5%;
-}
+}c
 
 body {
     font-family: "Lato", sans-serif;
