@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     /* font-size: 16px; */
     line-height: 1.7;
@@ -172,7 +172,7 @@ We can use our animation value multiple in place */
 }
 
 .btn::after {
-    content: "";
+    content: '';
     display: inline-block;
     height: 100%;
     width: 100%;
