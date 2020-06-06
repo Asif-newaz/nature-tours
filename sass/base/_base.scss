@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* html tag uses Browser default font size and Browser default font size is 16px */
+/* So here we have converted browser default font size to 10px */
+/* Remember one thing 16px = 100% for this case */
+/* So here i converted 16px to 10px by this calculation (10/16 = .625*100 = 62.5)  */
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
