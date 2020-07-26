@@ -1,4 +1,5 @@
 .card {
+    //FUNCTIONALITY
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
@@ -42,5 +43,11 @@
 
     &:hover &__side--back {
         transform: rotateY(0);
+    }
+
+    // FRONT SIDE STYLING
+    &__picture {
+        &--1 {
+        }
     }
 }
