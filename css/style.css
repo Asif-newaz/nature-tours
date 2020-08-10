@@ -28,7 +28,9 @@
 
 /* It's really crazy thing
 We can use our animation value multiple in place */
-/* .logo:hover {
+/*
+EXAMPLE:
+ .logo:hover {
   animation: moveInRight 1s ease-out;
 } */
 *,
