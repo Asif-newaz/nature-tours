@@ -43,7 +43,8 @@ EXAMPLE:
 /* html tag uses Browser default font size and Browser default font size is 16px */
 /* So here we have converted browser default font size to 10px */
 /* Remember one thing 16px = 100% for this case */
-/* So here i converted 16px to 10px by this calculation (10/16 = .625*100 = 62.5)  */
+/* So, here i converted 16px to 10px by this calculation (10/16 = .625*100 = 62.5)  */
+/* Therefore, if we multiply .625 with browser default font size 16px then we will get 10px. (Ex: .625 * 16 = 10) */
 html {
   font-size: 62.5%; }
 
