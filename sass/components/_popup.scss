@@ -1,0 +1,102 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-black, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.5s;
+
+    &__content {
+        @include center-horizontal-vertical;
+
+        width: 75%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+        border-radius: 3px;
+        overflow: hidden;
+
+        // Sometimes there is a need to center of box content vertically and horizontally using the table property. This is very handy way.
+        display: table;
+
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.25);
+        // Here the transform value is already used in the MIXIN to center horizontally vertically, so two values ​​are used together.
+
+        transition: all 0.5s 0.2s;
+        // Here 0.2s is animation delay
+    }
+
+    &__left {
+        width: 33.333333%;
+        display: table-cell;
+    }
+
+    &__right {
+        width: 66.666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem; // 1em = 14px;
+        -moz-column-rule: 1px solid $color-grey-light-2;
+
+        column-count: 2;
+        column-gap: 4rem; // 1em = 14px;
+        column-rule: 1px solid $color-grey-light-2;
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    // Open states
+    // Usually when we click on a link in an element then we can style another element with the target pseudo class.
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    // As soon as we click on the CLOSE button, section-tours ID will be targeted and then popup's opacity will be 0 and visibility will be hidden.
+    // Because popup initial state is, opacity:0 and visibility:hidden.
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1;
+            transition: all 0.2s;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
