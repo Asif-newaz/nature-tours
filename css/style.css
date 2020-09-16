@@ -1,10 +1,9 @@
 /* 
 0 - 600px:       phone
-600px - 900px:   Tablet Portrait
-600px - 900px:   Tablet Portrait
-600px - 900px:   Tablet Landscape
+600 - 900px:   Tablet Portrait
+900 - 1200px:   Tablet Landscape
 
-[1200px -1800px] is where our normal styles apply
+[1200 -1800px] is where our normal styles apply
 
 1800px + :   Big Desktop
 */
@@ -16,6 +15,7 @@ $breakpoint argument choices
 - Big-desktop
 
 1em = 16px
+EM IS THE BEST OPTION FOR THE MEDIA QUERY
 */
 /* It's really crazy thing
 We can use our animation value multiple in place */
@@ -66,15 +66,12 @@ EXAMPLE:
 /* Therefore, if we multiply .625 with browser default font size 16px then we will get 10px. (Ex: .625 * 16 = 10) */
 html {
   font-size: 62.5%; }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 50%; } }
-  @media (max-width: 56.25em) {
-    html {
-      font-size: 50%; } }
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
