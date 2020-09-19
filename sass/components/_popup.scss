@@ -30,11 +30,20 @@
 
         transition: all 0.5s 0.2s;
         // Here 0.2s is animation delay
+
+        @include respond(tab-port) {
+            padding: 2rem;
+        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(tab-port) {
+            display: table-row;
+            vertical-align: middle;
+        }
     }
 
     &__right {
@@ -42,11 +51,22 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            display: table-row;
+        }
     }
 
     &__img {
         width: 100%;
         display: block;
+
+        @include respond(tab-port) {
+            width: 50%;
+            float: left;
+            height: 25rem;
+            margin-bottom: 2rem;
+        }
     }
 
     &__text {
@@ -68,6 +88,7 @@
     }
 
     // Open states
+
     // Usually when we click on a link in an element then we can style another element with the target pseudo class.
     &:target {
         opacity: 1;
@@ -93,6 +114,10 @@
             display: inline-block;
             line-height: 1;
             transition: all 0.2s;
+
+            @include respond(tab-port) {
+                color: $color-white;
+            }
 
             &:hover {
                 color: $color-primary;
