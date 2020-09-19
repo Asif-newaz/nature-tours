@@ -481,11 +481,24 @@
 
         <footer class="footer">
             <div class="footer__logo-box">
-                <img
-                    src="img/logo-green-2x.png"
-                    alt="Full logo"
-                    class="footer__logo"
-                />
+                <!-- We could only use img tag here, since different images will be used for each screen, so we used picture tag -->
+                <picture class="footer__logo">
+                    <!-- Source tag is used to set different images for different screens -->
+                    <source
+                        srcset="
+                            img/logo-green-small-1x.png 1x,
+                            img/logo-green-small-2x.png 2x
+                        "
+                        media="(max-width: 37.5em)"
+                    />
+                    <img
+                        srcset="
+                            img/logo-green-1x.png 1x,
+                            img/logo-green-2x.png 2x
+                        "
+                        alt="Full logo"
+                    />
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
