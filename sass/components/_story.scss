@@ -28,12 +28,20 @@
         height: 15rem;
         width: 15rem;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        // Rules for using multiple transform value in the same element
         transform: translate(-3rem) skew(12deg);
         position: relative;
+
+        // There was no need for this here, if clip-path property does not support in the browser then overflow hidden will work
+        overflow: hidden;
+
+        // @supports means, If clip-path property supports in the browser then the inner block of the code will work, otherwise it will behave as like as before
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+        }
 
         @include respond(phone) {
             transform: translate(-3rem) skewX(0);
