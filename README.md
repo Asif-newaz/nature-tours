@@ -1,3 +1,6 @@
+# Course: [Advanced CSS and SASS ](https://www.udemy.com/advanced-css-and-sass/)
+## Author: Jonas Schmedtmann
+
 # nature-tours #
 
 * Undoubtedly a beautiful site using ___HTML5, CSS3, SCSS, NPM and BEM methodologye.___
