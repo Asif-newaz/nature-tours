@@ -3,7 +3,7 @@
 
 # nature-tours #
 
-* Undoubtedly a beautiful site using ___HTML5, CSS3, SCSS, NPM and BEM methodologye.___
+* Undoubtedly a beautiful site using ___HTML5, CSS3, SCSS, NPM and BEM methodology.___
 
 * The site has been made awesome using ___transitions.___
 
